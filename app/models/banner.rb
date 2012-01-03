@@ -7,7 +7,6 @@ class Banner < ActiveRecord::Base
 
   belongs_to :image
   has_and_belongs_to_many :pages
-  has_and_belongs_to_many :lodges
 
   scope :not_expired, lambda {
     banners = Arel::Table.new(Banner.table_name)
@@ -17,17 +16,5 @@ class Banner < ActiveRecord::Base
   scope :published, lambda {
     not_expired.active.where("start_date < ?", Time.now).order(:position)
   }
-
-  # Return banners that are not assigned to lodges
-  def self.without_lodges
-    all_banners = Banner.all
-    no_lodges = []
-
-    all_banners.each do |b|
-      no_lodges << b if b.lodges.count == 0
-    end
-
-    no_lodges
-  end
 
 end
