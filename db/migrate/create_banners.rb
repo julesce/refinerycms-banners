@@ -23,9 +23,9 @@ class CreateBanners < ActiveRecord::Migration
       UserPlugin.destroy_all({:name => "banners"})
     end
 
-    if defined?(Page)
-      Page.delete_all({:link_url => "/banners"})
-    end
+    #if defined?(Page)
+    #  Page.delete_all({:link_url => "/banners"})
+    #end
 
     drop_table :banners
   end

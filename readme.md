@@ -1,10 +1,25 @@
-# Banners engine for Refinery CMS.
+# Refinery CMS Banners
 
-## How to build this engine as a gem
+Simple banners engine for [Refinery CMS](http://refinerycms.com).
 
-    cd vendor/engines/banners
-    gem build refinerycms-banners.gemspec
-    gem install refinerycms-banners.gem
-    
-    # Sign up for a http://rubygems.org/ account and publish the gem
-    gem push refinerycms-banners.gem
+This version of `refinerycms-blog` supports Rails 3.0.x.
+
+## Requirements
+
+Refinery CMS version 1.0.0 or above.
+
+## Install
+
+Open up your ``Gemfile`` and add at the bottom this line:
+
+    gem 'refinerycms-banners', '~> 1.0.0'
+
+Now, run ``bundle install``
+
+Next, run:
+
+    rails generate refinerycms_banners
+
+Finally migrate your database and you're done.
+
+    rake db:migrate
