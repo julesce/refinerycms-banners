@@ -10,11 +10,13 @@ Refinery CMS version 1.0.0 or above.
 
 ## Install
 
-Open up your ``Gemfile`` and add at the bottom this line:
+Open up your ``Gemfile`` and add the following:
 
     gem 'refinerycms-banners', '1.0', :git => 'git://github.com/julesce/refinerycms-banners.git'
 
-Now, run ``bundle install``
+Now, run:
+
+    bundle install
 
 Next, run:
 
