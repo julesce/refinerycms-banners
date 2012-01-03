@@ -1,0 +1,21 @@
+nl:
+  plugins:
+    banners:
+      title: Banners
+  admin:
+    banners:
+      actions:
+        create_new: Maak een nieuwe Banner
+        reorder: Wijzig de volgorde van de Banners
+        reorder_done: Klaar met het wijzingen van de volgorde van de Banners
+      records:
+        title: Banners
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Banners. Druk op 'Maak een nieuwe Banner' om de eerste aan te maken.
+      banner:
+        view_live_html: Bekijk deze banner op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze banner
+        delete: Verwijder deze banner voor eeuwig
+  banners:
+    show:
+      other: Andere Banners

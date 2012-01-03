@@ -1,0 +1,25 @@
+lolcat:
+  shared:
+    admin:
+      image_picker:
+        image: IMAGE
+  plugins:
+    banners:
+      title: Banners
+  admin:
+    banners:
+      actions:
+        create_new: CREATE NEW Banner
+        reorder: REORDR Banners
+        reorder_done: DUN REORDERIN Banners
+      records:
+        title: Banners
+        sorry_no_results: SRY! THAR R NO RESULTS FINDZ.
+        no_items_yet: THAR R NO Banners YET. CLICK "CREATE NEW Banner" 2 ADD UR FURST banner.
+      banner:
+        view_live_html: VIEW DIS banner LIV <BR/><EM>(OPENS IN NEW WINDOW)</EM>
+        edit: EDIT DIS banner
+        delete: REMOOV DIS banner FOREVR
+  banners:
+    show:
+      other: OTHR Banners

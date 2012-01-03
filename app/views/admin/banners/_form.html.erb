@@ -1,0 +1,61 @@
+<%= form_for [:admin, @banner] do |f| -%>
+  <%= render :partial => "/shared/admin/error_messages", :locals => {
+          :object => @banner,
+          :include_object_name => true
+        } %>
+
+  <%= hidden_field_tag 'banner[page_ids][]' %>
+
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest'  -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :image -%>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {
+          :f => f,
+          :field => :image_id,
+          :image => @banner.image,
+          :toggle_image_display => false
+        } %>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :url -%>
+    <%= f.text_field :url  -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :is_active -%>
+    <%= f.check_box :is_active, :checked => @banner[:is_active]  -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :start_date -%>
+    <%= f.date_select :start_date  -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :expiry_date -%>
+    <%= f.date_select :expiry_date  -%>
+  </div>
+
+  <div class="field">
+    <%= f.label :pages %>
+    <% for page in Page.find(:all) %>
+      <div>
+        <%= check_box_tag "banner[page_ids][]", page.id, @banner.pages.include?(page) %>
+        <%= page.title %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('delete', :scope => 'admin.banners.banner'),
+                :delete_confirmation => t('message', :scope => 'shared.admin.delete', :title => @banner.name)
+              } %>
+<% end -%>
