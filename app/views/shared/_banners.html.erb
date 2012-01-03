@@ -1,0 +1,9 @@
+<div id="slider">
+  <% if @page.present? and @page.banners.published.present? %>
+    <%= render :partial => 'shared/banner_image', :collection => @page.banners.published %>
+  <% elsif @banners.present? then %>
+      <%= render :partial => 'shared/banner_image', :collection => @banners %>
+  <% else %>
+    <!--todo: insert static images here-->
+  <% end %>
+</div>
