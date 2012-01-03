@@ -1,6 +1,6 @@
 # Refinery CMS Banners
 
-Simple banners engine for [Refinery CMS](http://refinerycms.com). Creates a many-to-many relationship between Pages and Banners.
+Simple banners engine for [Refinery CMS](http://refinerycms.com). Creates a many-to-many relationship between Pages and Banners, allowing an Image to be assigned to a Banner as well.
 
 This version of `refinerycms-banners` supports Rails 3.0.x.
 
