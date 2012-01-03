@@ -1,6 +1,6 @@
 # Refinery CMS Banners
 
-Simple banners engine for [Refinery CMS](http://refinerycms.com).
+Simple banners engine for [Refinery CMS](http://refinerycms.com). Creates a many-to-many relationship between Pages and Banners.
 
 This version of `refinerycms-banners` supports Rails 3.0.x.
 
@@ -23,3 +23,9 @@ Next, run:
 Finally migrate your database and you're done.
 
     rake db:migrate
+
+## Usage
+
+It is up to you to make use of the banners assigned to your pages. To get the published banners for your current page:
+
+    @page.banners.published
