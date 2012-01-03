@@ -1,5 +1,4 @@
 ::Refinery::Application.routes.draw do
-  resources :banners, :only => [:index, :show]
 
   scope(:path => 'refinery', :as => 'admin', :module => 'admin') do
     resources :banners, :except => :show do
