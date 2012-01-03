@@ -32,7 +32,7 @@ It is up to you to make use of the banners assigned to your pages. To get the pu
 
 Let's say you are using the [Nivo Slider](http://nivo.dev7studios.com/) for your banners in your views, you could do the following:
 
-     <div id="nivo_slider">
+    <div id="nivo_slider">
       <% if @page.present? and @page.banners.published.present? %>
         <% @page.banners.published.each do |banner| %>
           <%= image_fu(banner.image, '960x310#c') %>
