@@ -4,6 +4,8 @@ class Banner < ActiveRecord::Base
 
   validates :name, :presence => true
   validates_presence_of :start_date
+  validates_length_of :title, :in => 0..255, :allow_nil => true
+  validates_length_of :description, :in => 0..255, :allow_nil => true
 
   belongs_to :image
   has_and_belongs_to_many :pages
