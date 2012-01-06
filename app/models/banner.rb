@@ -1,6 +1,6 @@
 class Banner < ActiveRecord::Base
 
-  acts_as_indexed :fields => [:name, :url]
+  acts_as_indexed :fields => [:name, :url, :title, :description]
 
   validates :name, :presence => true
   validates_presence_of :start_date
