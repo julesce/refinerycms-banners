@@ -16,7 +16,7 @@ class Banner < ActiveRecord::Base
   }
   scope :active, where(:is_active => true)
   scope :published, lambda {
-    not_expired.active.where("start_date < ?", Time.now).order(:position)
+    not_expired.active.where("start_date <= ?", Time.now).order(:position)
   }
 
 end
